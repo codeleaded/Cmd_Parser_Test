@@ -17,11 +17,11 @@ int main(){
         KeywordRP_End()
     });
     OperatorMap om = OperatorMap_Make((OperatorRP[]){
-        OperatorRP_Make((TT_Type[]){ TOKEN_EQUAL_SIGN,TOKEN_INITLISTEND },                  TOKEN_CUSTOM_ASS,1),
-        OperatorRP_Make((TT_Type[]){ TOKEN_PLUS_SIGN,TOKEN_INITLISTEND },                   TOKEN_CUSTOM_ADD,1),
-        OperatorRP_Make((TT_Type[]){ TOKEN_MINUS_SIGN,TOKEN_INITLISTEND },                  TOKEN_CUSTOM_SUB,1),
-        OperatorRP_Make((TT_Type[]){ TOKEN_MINUS_SIGN,TOKEN_INITLISTEND },                  TOKEN_CUSTOM_NEG,0),
-        OperatorRP_Make((TT_Type[]){ TOKEN_MINUS_SIGN,TOKEN_MINUS_SIGN,TOKEN_INITLISTEND }, TOKEN_CUSTOM_DEC,0),
+        OperatorRP_Make((TT_Type[]){ TOKEN_EQUAL_SIGN,TOKEN_END },                  TOKEN_CUSTOM_ASS,1),
+        OperatorRP_Make((TT_Type[]){ TOKEN_PLUS_SIGN,TOKEN_END },                   TOKEN_CUSTOM_ADD,1),
+        OperatorRP_Make((TT_Type[]){ TOKEN_MINUS_SIGN,TOKEN_END },                  TOKEN_CUSTOM_SUB,1),
+        OperatorRP_Make((TT_Type[]){ TOKEN_MINUS_SIGN,TOKEN_END },                  TOKEN_CUSTOM_NEG,0),
+        OperatorRP_Make((TT_Type[]){ TOKEN_MINUS_SIGN,TOKEN_MINUS_SIGN,TOKEN_END }, TOKEN_CUSTOM_DEC,0),
         OperatorRP_End()
     });
     ReseterMap rsm = ReseterMap_Make((Reseter[]){ 
@@ -87,7 +87,7 @@ int main(){
         { TOKEN_FRACTION_SLASH,RESETER_RST },
         { TOKEN_INTERROBANG,RESETER_RST },
         { TOKEN_BULLET_POINT,RESETER_RST },
-        { TOKEN_INITLISTEND,RESETER_RST } 
+        { TOKEN_END,RESETER_RST } 
     });
     
     Parser p = Parser_New();
