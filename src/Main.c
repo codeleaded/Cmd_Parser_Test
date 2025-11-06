@@ -14,7 +14,7 @@ int main(){
     KeywordMap kwm = KeywordMap_Make((KeywordRP[]){
         KeywordRP_New("Hello",TOKEN_CUSTOM_HELLO),
         KeywordRP_New("World",TOKEN_CUSTOM_WORLD),
-        KeywordRP_End()
+        KeywordRP_Null()
     });
     OperatorMap om = OperatorMap_Make((OperatorRP[]){
         OperatorRP_Make((TT_Type[]){ TOKEN_EQUAL_SIGN,TOKEN_END },                  TOKEN_CUSTOM_ASS,1),
