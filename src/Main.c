@@ -92,7 +92,7 @@ int main(){
     
     Parser p = Parser_New();
 
-    Parser_Parse_cstr(&p,"a = --a - 1 + (-1) - (--a);");
+    Parser_Parse_CStr(&p,"a = --a - 1 + (-1) - (--a);",NULL);
     Parser_Print(&p);
     Parser_TF_Std(&p);
     Parser_TF_KW(&p,&kwm);
